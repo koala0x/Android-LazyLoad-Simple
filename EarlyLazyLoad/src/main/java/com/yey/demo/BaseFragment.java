@@ -25,6 +25,7 @@ public abstract class BaseFragment extends Fragment {
         isShow = isVisibleToUser;
         //尝试加载
         onLazyLoad();
+
     }
 
     /**
