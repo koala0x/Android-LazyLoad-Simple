@@ -1,0 +1,3 @@
+include ':EarlyLazyLoad', ':AndroidX-LazyLoad', ':ViewPager2-LazyLoad'
+//include ':app'
+rootProject.name='Android-LazyLoad-Simple'
