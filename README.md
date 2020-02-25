@@ -1,5 +1,5 @@
 # Android-LazyLoad-Simple 文档
-> 因为推出了Android X和ViewPgaer2,我觉得有必要写个小Demo总结下Android懒加载.
+> 因为推出了Android X,我觉得有必要写个小Demo总结下Android懒加载.
 #### AndroidX-LazyLoad
 这个Demo是用的AndroidX中的Fragment和ViewPager进行懒加载的描述.
 - 创建Adapter的时候设置一个 `BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT`参数
