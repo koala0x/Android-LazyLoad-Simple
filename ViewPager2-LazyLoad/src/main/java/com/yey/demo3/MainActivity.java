@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 //        mVp.setOrientation(ViewPager2.ORIENTATION_VERTICAL); ViewPager2 垂直滑动
 //        mVp.setOffscreenPageLimit(1);//当设置Limit为1时候,将缓存一个页面,(Limit的值必须大于0)
         mVp.setAdapter(myFragmentStateAdapter);
-        mVp.setOffscreenPageLimit(2);
+//        mVp.setOffscreenPageLimit(2);
     }
 
     private void addFragments() {

@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         addFragments();
         MyFragmentStatePagerAdapter myFragmentStatePagerAdapter = new MyFragmentStatePagerAdapter(
                 getSupportFragmentManager(),
-//                FragmentStatePagerAdapter.BEHAVIOR_SET_USER_VISIBLE_HINT, 兼容以前那种方式实现的懒加载
+                //FragmentStatePagerAdapter.BEHAVIOR_SET_USER_VISIBLE_HINT, 兼容以前那种方式实现的懒加载
                 FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,
                 mFragments);
         mVp.setAdapter(myFragmentStatePagerAdapter);

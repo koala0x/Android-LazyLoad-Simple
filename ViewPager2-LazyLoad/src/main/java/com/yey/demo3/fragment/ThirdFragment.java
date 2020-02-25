@@ -20,13 +20,13 @@ public class ThirdFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate: 第三个Fragment");
+        Log.d(TAG, "onCreate: 第3个Fragment");
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart: 第三个Fragment");
+        Log.d(TAG, "onStart: 第3个Fragment");
     }
 
     @Nullable
@@ -34,6 +34,7 @@ public class ThirdFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         TextView textView = new TextView(getActivity());
         textView.setText("第三个Fragment");
+        Log.d(TAG, "onCreateView: 第3个Fragment");
         textView.setGravity(Gravity.CENTER);
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         textView.setLayoutParams(layoutParams);
@@ -46,9 +47,21 @@ public class ThirdFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        Log.d(TAG, "onResume: 第3个Fragment");
         if (isFirstLoad) {
             isFirstLoad = !isFirstLoad;
-            Log.d(TAG, "onResume: 第三个Fragment");
+            Log.d(TAG, "第3个Fragment 懒加载");
         }
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause: 第3个Fragment");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop: 第3个Fragment");
     }
 }

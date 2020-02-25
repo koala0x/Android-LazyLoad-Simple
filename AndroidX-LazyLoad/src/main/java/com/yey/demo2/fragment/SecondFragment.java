@@ -17,18 +17,19 @@ public class SecondFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate: 第二个Fragment");
+        Log.d(TAG, "onCreate: 第2个Fragment");
     }
     @Override
     public void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart: 第二个Fragment");
+        Log.d(TAG, "onStart: 第2个Fragment");
     }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         TextView textView = new TextView(container.getContext());
         textView.setText("第二个Fragment");
+        Log.d(TAG, "onCreateView: 第2个Fragment");
         textView.setGravity(Gravity.CENTER);
         ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
         layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -43,9 +44,21 @@ public class SecondFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        Log.d(TAG, "onResume: 第2个Fragment");
         if (isFirstLoad){
             isFirstLoad = !isFirstLoad;
-            Log.d(TAG, "onResume: 第二个Fragment");
+            Log.d(TAG, "第2个Fragment懒加载");
         }
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause: 第2个Fragment");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop: 第2个Fragment");
     }
 }

@@ -18,16 +18,17 @@ public class FourthFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate: 第四个Fragment");
+        Log.d(TAG, "onCreate: 第4个Fragment");
     }
     @Override
     public void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart: 第四个Fragment");
+        Log.d(TAG, "onStart: 第4个Fragment");
     }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView: 第4个Fragment");
         TextView textView = new TextView(container.getContext());
         textView.setText("第四个Fragment");
         textView.setGravity(Gravity.CENTER);
@@ -45,9 +46,22 @@ public class FourthFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        Log.d(TAG, "onResume: 第4个Fragment");
         if (isFirstLoad){
             isFirstLoad = !isFirstLoad;
-            Log.d(TAG, "onResume: 第四个Fragment");
+            Log.d(TAG, "第4个Fragment懒加载");
         }
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause: 第4个Fragment");
+    }
+
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop: 第4个Fragment");
     }
 }
